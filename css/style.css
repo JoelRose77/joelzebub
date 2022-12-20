@@ -16,13 +16,13 @@
     --color-tertiary: #99432d;
     --color-Quaternary: #783535;
     --color-quinary: #583437;
-    --color-senary:#3f9b70;
+    --color-senary:#a4a2e6;
     --menuBG-color: #5c4343;
     --clr-accent: #F7F7FF;
     --text-color: #f5f5f5;
     --white: #ffffff;
     --clr-gradient: linear-gradient(-90deg, var(--color-primary),var(--color-tertiary));
-    --ff-title: 'Gayathri', sans-serif;
+    --ff-title: 'TafelSansPro-Black', sans-serif;
     --ff-body: 'Gayathri', sans-serif;
     --fw-body: 400;
     --fw-bold: 800;
@@ -125,6 +125,7 @@ header.sticky{
     color: var(--text-color);
     font-weight: bold;
     font-size: 2rem;
+    font-family: 'Berlin Sans FB';
     padding: 10px 20px;
 }
 .navbar h2 {
@@ -191,7 +192,90 @@ header.sticky{
     filter: drop-shadow(1px 3px 5px rgb(133, 41, 45));
  
 }
-
+.m-c{
+  --add: 0;
+  position:relative;
+  z-index:calc(1 + var(--add)*2);
+  display:inline-block;
+  font-weight:calc(200 + 700*var(--add));
+  font-stretch:calc(150% + 25%*var(--add));
+  color:hsl(240deg, 100%, calc(85% + 15% * var(--add)));
+  transition:transform .2s,color .2s,font-stretch .2s,font-weight .2s ease;
+  filter: drop-shadow(1px 3px 5px hsl(242, 58%, 77%));
+}
+  .m-c:hover{
+      --add: 1;
+      color: #d1f4ff;
+      filter: drop-shadow(1px 3px 5px hsl(242, 58%, 77%));
+      transition: all 1s ease;
+  }
+  .m-c:hover+.m-c,
+  .m-c:has(+.m-c:hover){
+      --add: 0.7;
+      color: #d1f4ff;
+      filter: drop-shadow(1px 3px 5px hsl(242, 58%, 77%));
+      transition: all 1s ease;
+  }
+  .m-c:hover+.m-c+.m-c,
+  .m-c:has(+.m-c+.m-c:hover){
+      --add: 0.45;
+      color: #d1f4ff;
+      filter: drop-shadow(1px 3px 5px hsl(242, 58%, 77%));
+      transition: all 1s ease;
+  }
+  .m-c:hover+.m-c+.m-c+.m-c,
+  .m-c:has(+.m-c+.m-c+.m-c:hover){
+      --add: 0.2;
+      color: #d1f4ff;
+      filter: drop-shadow(1px 3px 5px hsl(242, 58%, 77%));
+      transition: all 1s ease;
+  }
+  .animated {
+    font-size: 80px;
+    font-weight: 900;
+    text-decoration: none;
+    background: linear-gradient(to left, #cf4545 50%, #fff 50%, #fff);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.5s ease-out;
+    filter: drop-shadow(1px 3px 5px rgb(148, 35, 35));
+  }
+  .animated:hover {
+    background-position: -100%;
+    filter: drop-shadow(1px 3px 5px rgb(148, 35, 35));
+  }
+  .animated-logo {
+    font-size: 30px;
+    font-weight: 400;
+    text-decoration: none;
+    background: linear-gradient(to right, #ffffff 50%, #cf4545 50%, #cf4545);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.5s ease-out;
+    filter: drop-shadow(1px 3px 5px rgb(148, 35, 35));
+  }
+  .animated-logo:hover {
+    background-position: -100%;
+    filter: drop-shadow(1px 3px 5px rgb(148, 35, 35));
+  }
+  .animated-logo2 {
+    font-size: 30px;
+    font-weight: 400;
+    text-decoration: none;
+    background: linear-gradient(to left,#cf4545 50%, #ffffff 50%, #ffffff);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.5s ease-out;
+    filter: drop-shadow(1px 3px 5px rgb(148, 35, 35));
+  }
+  .animated-logo2:hover {
+    background-position: 100%;
+    filter: drop-shadow(1px 3px 5px rgb(148, 35, 35));
+    transition: all 1s ease;
+  }
 /* About */
 section{
     padding: 120px 15%;
@@ -217,9 +301,11 @@ section{
     font-size: 35px;
     font-weight: 600;
     color: var(--text-color);
+    font-family: 'Berlin Sans FB';
+
 }
 .home-text h3 {
-    font-size: 23px;
+    font-size: 35px;
     font-weight: 500;
     color: var(--text-color);
 }
@@ -232,18 +318,22 @@ section{
     filter: drop-shadow(1px 2px 2px rgb(0, 0, 0));
 }
 .home-img img{
-  margin-left: 70px;
+  height: 500px;
+  width: 500px;
+  margin-left: 750px;
+  margin-top: -550px;
   border-radius: 50%;
   filter: drop-shadow(1px 5px 15px #ff8b8b);
 }
 span {
-    background: -webkit-linear-gradient(#ffffff, #ff8b8b,#ffffff);
+    background: -webkit-linear-gradient(#7472a5, #a4a2e6,#7472a5);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: var(--mainBG-color);
+    color: var(--white);
     font-size: 3rem;
-    font-family: 'Gayathri', sans-serif;
-}
+    font-family: 'hubot-sans';
+    transition: all 1s ease;
+  }
 
 /* about */
 .about {
@@ -271,6 +361,13 @@ span {
     font-size: 30px;
     margin-bottom: 1.5rem;
     line-height: 1.3;
+    font-family: 'Berlin Sans FB';
+    transition: all 1s ease;
+}
+.about-text h3 {
+  font-size: 30px;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
 }
 .about-text h1 {
     font-size: var(--big-font);
@@ -302,7 +399,7 @@ span {
     background-repeat: no-repeat; */
 }
 .work h4{
-    font-size: 4.5rem;
+    font-family: 'Berlin Sans FB';
     line-height: 1.5;
     font-size: 3.5rem;
     left: 20px;
@@ -317,7 +414,7 @@ span {
   font-weight: 600;
 }
 .work-text p {
-  color: var(--color-primary);
+  color: var(--color-senary);
   font-size: 25px;
   font-weight: 300;
   line-height: 30px;
@@ -337,23 +434,28 @@ span {
 }
 
 #testimonial-carousel {
-    padding: 100% 100%;
+    padding: 200% 200%;
     margin: 20px 20px 20px 20px;
+    height: 800px;
+    width: 800px;
+    margin-right: 500px;
+    margin-top: -200px;
     text-align: center;
     border-radius: 20px 20px 20px 20px;
     background-color: var(--mainBG-color);
     color: var(--mainBG-color);
+    transition: all 1s ease;
     z-index: 2;
  
   }
   .testimonial-text {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     line-height: 1.5;
     font-size: var(--h2-font);
     color: var(--text-color);
   }
   .testimonial-text h2{
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     line-height: 1.5;
     font-size: var(--h2-font);
     color: var(--text-color);
@@ -365,7 +467,6 @@ span {
   /* this make this Round -> */  
     border-radius: 8px 8px 8px 8px;
     margin: 0px;
-
   }
 
   /* end work */
@@ -375,20 +476,28 @@ span {
     background-size: cover;
     background-repeat: no-repeat; */
 }
+.gallery h4{
+  font-family: 'Berlin Sans FB';
+  font-size: 3.5rem;
+  line-height: 1.5;
+  font-size: var(--h2-font);
+  color: var(--text-color);
+  transition: all 1s ease;
+}
 .gallery h2{
     font-size: 3.5rem;
     line-height: 1.5;
     font-size: var(--h2-font);
     color: var(--text-color);
 }
-.image-hover {
-    /* filter: drop-shadow(1px 2px 3px rgb(255, 0, 0)); */
-    filter:
+.image-hover { 
+    filter: drop-shadow(1px 2px 3px rgb(218, 93, 93));
+    /* filter:
     drop-shadow(0px 2px 3px #f89a9a)
-    /* drop-shadow(1px 4px 5px #783575) */
-    drop-shadow(2px 3px 4px #83282c);
+    drop-shadow(1px 4px 5px #783575)
+     drop-shadow(2px 3px 4px #83282c); */
   }
-.gradient-box {
+/* .gradient-box {
   
     display: flex;
     align-items: center;
@@ -404,8 +513,8 @@ span {
     border: 5px;
     color: #FFF;
     background: #000;
-    background-clip: padding-box; /* !importanté */
-    border: solid $border transparent; /* !importanté */
+    background-clip: padding-box; !importanté */
+    /* border: solid $border transparent;  !importanté 
     border-radius: 1em;
   
     &:before {
@@ -413,11 +522,11 @@ span {
       position: absolute;
       top: 0; right: 0; bottom: 0; left: 0;
       z-index: -1;
-      margin: -$border; /* !importanté */
-      border-radius: inherit; /* !importanté */
-      background: linear-gradient(to right, #cf4545, #ff9100, #783575);
+      margin: -$border;  !importanté */
+      /* border-radius: inherit;  !importanté */
+      /* background: linear-gradient(to right, #cf4545, #ff9100, #783575);
     }
-  }
+  }    */
 /* Music */
 .music-about {
   position: relative;
@@ -431,9 +540,11 @@ span {
   align-items: center;
 }
 .music-about h4 {
-  font-size: var(--big-font);
+  font-family: 'Berlin Sans FB';
+  font-size: 40px;
   margin-bottom: 2rem;
   line-height: 1.3;
+  transition: all 1s ease;
 }
 .music-about h1 {
   font-size: var(--big-font);
@@ -444,21 +555,22 @@ span {
 }
 .music-about p {
   font-size: 30px;
-  color: var(--color-primary);
-  font-weight: 500;
-  line-height: 32px;
-  margin-bottom: 2.3rem;
-  filter: drop-shadow(1px 2px 2px rgb(0, 0, 0));
+  font-weight: 300;
+  font-family: 'hubot-sans';
+  line-height: 36px;
+  color: var(--color-senary);
+  margin-bottom: 55px;
+  filter: drop-shadow(1px 3px 5px hsl(242, 58%, 77%));
 }
 .Music{
   height: 100vh;
   width: 100%;
 }
-.music-bg{
+/* .music-bg{ */
   /* background: url(../img/work-bg.png);
   background-size: cover;
   background-repeat: no-repeat; */
-}
+/* } */
 /* mp3 */
 audio::-webkit-media-controls-panel {
 background: linear-gradient(90deg, #e75757 0%, #cf4545 50%, #e75757 100%);    
@@ -500,17 +612,19 @@ audio::-webkit-media-controls-panel {
   }
   
   .contact-content h4{
-  font-size: 30px;
+  font-family: 'Berlin Sans FB';
+  font-size: 35px;
   color: var(--white);
   margin-bottom: 1.5rem;
   cursor: pointer;
   filter: drop-shadow(1px 2px 3px rgb(110, 47, 47));
   }
   .contact-content h4:hover{
-    font-size: 30px;
+    font-size: 35px;
     color: var(--color-primary);
     margin-bottom: 1.5rem;
     cursor: pointer;
+    transition: 0.5s ease;
     filter: drop-shadow(1px 2px 3px rgb(110, 47, 47));
     }
   .contact-content li{
@@ -638,3 +752,25 @@ audio::-webkit-media-controls-panel {
     background-repeat: no-repeat;
 } */
 
+/* adding fonts */
+@font-face {
+	font-family: 'hubot-sans';
+	src: url('hubot-sans.woff2') format('woff2') tech('variations'),
+	     url('hubot-sans.woff2') format('woff2-variations');
+	font-weight: 100 1000;
+	font-stretch: 25% 151%;
+}
+@font-face {
+	font-family: 'Aileron-Regular';
+	src: url('Aileron-Regular.woff') format('woff') tech('variations'),
+	     url('Aileron-Regular.woff') format('woff-variations');
+	font-weight: 100 1000;
+	font-stretch: 25% 151%;
+}
+@font-face {
+	font-family: 'Berlin Sans FB';
+	src: url('Berlin Sans FB.woff2') format('woff2') tech('variations'),
+	     url('Berlin Sans FB.woff2') format('woff2-variations');
+	font-weight: 100 1000;
+	font-stretch: 25% 151%;
+}
