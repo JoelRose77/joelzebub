@@ -640,11 +640,13 @@ audio::-webkit-media-controls-panel {
     list-style: none;
     text-decoration: none;
     cursor: pointer;
+    transition: all .38s ease-in-out;
   }
   .contact-content li a:hover{
-    transform: translateX(10px);
+    transform: translateX(15px);
     color: var(--color-primary);
     cursor: pointer;
+    transition: all .38s ease-in-out;
   }
   .contact-content .social-media{
     transform: translateX(0px);
@@ -653,6 +655,7 @@ audio::-webkit-media-controls-panel {
     list-style: none;
     text-decoration: none;
     cursor: pointer;
+    transition: all .38s ease-in-out;
   }
   .contact-content .social-media:hover{
     transform: translateX(30px);
@@ -661,6 +664,7 @@ audio::-webkit-media-controls-panel {
     list-style: none;
     text-decoration: none;
     cursor: pointer;
+    transition: all .38s ease-in-out;
   }
   .Last-text p{
   text-align: center;
@@ -670,6 +674,7 @@ audio::-webkit-media-controls-panel {
   font-size: 15px;
   letter-spacing: 1px;
   cursor: pointer;
+  transition: all .38s ease-in-out;
   }
   .Last-text p:hover{
     text-align: center;
@@ -679,6 +684,7 @@ audio::-webkit-media-controls-panel {
     font-size: 15px;
     letter-spacing: 1px;
     cursor: pointer;
+    transition: all .38s ease-in-out;
     }
   .scroll-top{
   position: fixed;
